@@ -213,18 +213,22 @@ header label{
 
 .deserts .card-container .card img{
     height: 20rem;
+    margin: 1rem 0;
     border-radius: 50%;
+
 }
 
 .deserts .card-container .card h3{
     font-size: 2rem;
     color: var(--purple);
+    margin: 1rem 0;
     padding: 1rem 3rem;    
     text-transform: uppercase;
     letter-spacing: .1rem
 }
 
 .deserts .card-container .card .description{
+    margin: 2rem 0;
     padding: 0 3rem;
     color: #656565;
     font-family:Roboto;
@@ -233,10 +237,14 @@ header label{
 }
 .deserts .card-container .card .price{
     padding: 2rem 2rem;
+    margin: 1rem 0;
     color: var(--pink);    
     font-size: 2rem;
-    letter-spacing: 0.15rem;
-     
+    letter-spacing: 0.15rem;     
+}
+
+.deserts .card-container .card .btn{
+    margin: 2rem 0;
 }
 
 
