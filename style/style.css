@@ -1,0 +1,333 @@
+/* Подключаем шрифты с google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Viaoda+Libre&display=swap');
+
+/* Подключаем свой шрифт */
+@font-face {
+    font-family: GoodVibesPro; /* Гарнитура шрифта */
+    src: url(../style/GoodVibesPro.ttf); /* Путь к файлу со шрифтом */
+   }
+
+:root{
+    --purple:#814096;
+    --pink:#F83292;
+    --gradient:linear-gradient(90deg, var(--purple), var(--pink));    
+}
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Viaoda Libre', cursive;
+    text-decoration: none;
+    outline: none;border: none;
+    /* text-transform: capitalize;  все первые буквы - заглавные */
+}
+
+*::selection{
+    background:var(--pink);
+    color: #fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: #f9f9f9;
+}
+
+section{
+    min-height: 100vh;
+    padding: 0 8%; /* задаем размер секций на 8% уже, чем у документа*/
+    padding-top: 7.5rem;
+}
+
+.btn{ /*создаем единый стиль для всех кнопок*/
+    display: inline-block;
+    font-family: Roboto;
+    text-transform: uppercase;   
+    margin-top: 1rem;
+    padding: 1.5rem 4rem;
+    border-radius: 5rem;
+    background: var(--gradient);
+    font-size: 1.7rem;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: .3rem .4rem rgba(0,0,0,.1);
+    transition: all .3s linear;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+.heading{ /* делаем ЗАГОЛОВКИ СЕКЦИЙ с градиентной заливкой*/
+    text-align: center;
+    background: var(--gradient);    
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 1rem;
+}
+
+header{
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+    /* background: #fff; */
+    background: rgba(255,255,255,.9);
+    box-shadow: 0.5rem .4rem rgba(0,0,0,.1);
+    padding: 2rem 9%; /* отступы от краёв*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo{
+    font-size: 3rem;
+    color: var(--purple);    
+}
+
+header .logo span{
+    font-family: GoodVibesPro;
+    color: var(--pink);    
+}
+
+header .navbar a{
+    font-family: Roboto;
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    color: var(--purple);
+    text-transform: uppercase;
+}
+
+header .navbar a:hover{
+    color: var(--pink);
+    text-decoration: underline;    
+    text-underline-offset: .5rem;
+}
+
+header input {
+    display: none;
+}
+
+header label{
+    font-size: 3rem;
+    color: var(--purple);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.home {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: url(../img/Main-bg\ \(v1\).jpg) no-repeat;
+    background-size: cover;
+    background-position: right; /* прижимаю к правому углу, т.к. у фона акцентный рисунок справа*/
+}
+
+/* .home .image img{
+    width: 40vw;
+    animation: float 3s linear infinite;
+} 
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-3.5rem);
+    }
+}*/
+
+.home .content{
+    /* margin-right: 30rem; */
+    
+    color: #656565;
+}
+
+.home .content h3{
+    font-size: 5rem;    
+    text-transform: uppercase;
+    letter-spacing: .2rem; 
+    margin-bottom: 1rem;   
+}
+
+.home .content h3 span{
+    color: var(--pink);
+    text-transform: uppercase;
+    
+}
+
+.home .content p{
+    font-family:Roboto;
+    font-size: 1.7rem;    
+    padding: 1rem 0;  
+    /* line-height: 2.5rem;  */
+}
+.home .content p span{
+    font-family:Roboto;
+    color: var(--pink);
+}
+
+.home .content .btn{
+    margin-top: 3rem;
+}
+
+.deserts{
+    background: #fff;
+}
+
+.deserts .card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.deserts .card-container .card{
+    flex:1 1 25rem;
+    background: #fff;
+    border-radius: 2rem;
+    /* border: .1rem solid var(--pink); */
+    box-shadow: .1rem .2rem 2rem rgba(0,0,0,.25), .05rem 0 .1rem rgba(0,0,0,.25);
+    margin: 1.5rem;
+    padding: 3rem 2rem;    
+    text-align: center;
+    transition: .2s linear;
+}
+
+.deserts .card-container .card:hover{   
+    background: rgb(255, 224, 245); 
+    box-shadow: inset .1rem .2rem 1rem rgba(0,0,0,.25);
+    /* border: .1rem solid var(--purple); */
+}
+
+.deserts .card-container .card img{
+    height: 20rem;
+    border-radius: 50%;
+}
+
+.deserts .card-container .card h3{
+    font-size: 2rem;
+    color: var(--purple);
+    padding: 1rem 3rem;    
+    text-transform: uppercase;
+    letter-spacing: .1rem
+}
+
+.deserts .card-container .card .description{
+    padding: 0 3rem;
+    color: #656565;
+    font-family:Roboto;
+    font-size: 1.3rem;
+    line-height: 2rem; 
+}
+.deserts .card-container .card .price{
+    padding: 2rem 2rem;
+    color: var(--pink);    
+    font-size: 2rem;
+    letter-spacing: 0.15rem;
+     
+}
+
+
+
+
+
+
+
+
+/*media qeries*/
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:991px){
+    section{
+        padding: 0 3%;
+        padding-top: 7.5rem;
+    }
+    header{
+        padding: 2rem 3%;
+    }
+    
+}
+@media (max-width:768px){
+    header label{        
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0;
+        width: 100%;
+        /* background: #fff; */
+        background: rgba(255,255,255,.7);
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: .5rem .5rem rgba(0,0,0,.1);
+        transform-origin: top;
+        transform: scaleY(0); /* исчезновение */
+        opacity: 0;
+        transition: .2s linear;/* плавная анимация появления/исчезновения */
+    }
+    
+    header .navbar a{
+        display: block;
+        margin: 2rem 0;
+        font-family:Roboto;
+        font-size: 2rem;        
+    }
+
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;        
+    }
+
+    header input:checked ~ label::before{
+        content: '\f00d'; /*крестик в FontAwsome*/
+    }
+
+    .home{
+        /* flex-direction: column-reverse; */  
+        justify-content: center;      
+    }
+
+    /* .home .image img{
+        width: 100%;
+    } */
+    
+    .home .content{
+        display: flex;
+        flex-direction: column; /* выстраивает эл-ты в столбец*/
+        justify-content: center;
+        align-items: center;        
+    }
+
+    .home .content h3{
+        font-size: 3.6rem;   
+        text-align: center; 
+        margin-top: 20rem;                
+    }
+
+    .home .content p{
+        font-size: 1.5rem;
+        text-align: center; 
+        margin-bottom: 5rem;  
+    }
+
+    .home .content .btn{
+        margin-top: 3rem;
+}
