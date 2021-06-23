@@ -41,7 +41,7 @@ body{
 section{
     min-height: 100vh;
     padding: 0 8%; /* задаем размер секций на 8% уже, чем у документа*/
-    padding-top: 7.5rem;
+    padding-top: 7rem;
 }
 
 .btn{ /*создаем единый стиль для всех кнопок*/
@@ -206,7 +206,7 @@ header label{
 }
 
 .deserts .card-container .card:hover{   
-    background: rgb(255, 224, 245); 
+    background: rgb(255, 247, 250); 
     box-shadow: inset .1rem .2rem 1rem rgba(0,0,0,.25);
     /* border: .1rem solid var(--purple); */
 }
