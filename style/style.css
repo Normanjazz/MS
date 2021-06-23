@@ -208,8 +208,7 @@ header label{
 
 .deserts .card-container .card:hover{   
     background: rgb(255, 247, 250); 
-    box-shadow: inset .1rem .2rem 1rem rgba(0,0,0,.25);
-    /* border: .1rem solid var(--purple); */
+    box-shadow: inset .1rem .2rem 1rem rgba(0,0,0,.25);    
 }
 
 .deserts .card-container .card img{
@@ -219,8 +218,9 @@ header label{
     border-radius: 50%;
 }
 
-.deserts .card-container .card .name{    
-    height: 76px;
+.deserts .card-container .card .name-container{  
+    padding: 0 3rem;  
+    height: 7.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,9 +233,16 @@ header label{
     letter-spacing: .2rem
 }
 
+.deserts .card-container .card .description-container{
+    padding: 0 3rem; 
+    height: 6rem;   
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .deserts .card-container .card .description{
-    /* margin: 2rem 0; */
-    padding: 0 3rem;
+    /* margin: 2rem 0; */    
     color: #656565;
     font-family:Roboto;
     font-size: 1.3rem;
