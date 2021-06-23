@@ -193,9 +193,7 @@ header label{
     flex-wrap: wrap;
 }
 
-.deserts .card-container .card{
-    width: 35rem;
-    height: 60rem;
+.deserts .card-container .card{    
     flex:1 1 30rem;
     background: #fff;
     border-radius: 2rem;
@@ -217,20 +215,24 @@ header label{
     height: 20rem;
     margin: 1rem 0;
     border-radius: 50%;
+}
 
+.deserts .card-container .card .name{    
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .deserts .card-container .card h3{
     font-size: 2rem;
-    color: var(--purple);
-    margin: 1rem 0;
-    padding: 1rem 3rem;    
+    color: var(--purple);    
     text-transform: uppercase;
     letter-spacing: .2rem
 }
 
 .deserts .card-container .card .description{
-    margin: 2rem 0;
+    /* margin: 2rem 0; */
     padding: 0 3rem;
     color: #656565;
     font-family:Roboto;
@@ -238,7 +240,7 @@ header label{
     line-height: 2rem; 
 }
 .deserts .card-container .card .price{
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
     margin: 1rem 0;
     color: var(--pink);    
     font-size: 2rem;
@@ -246,7 +248,7 @@ header label{
 }
 
 .deserts .card-container .card .btn{
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 
