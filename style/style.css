@@ -194,7 +194,7 @@ header label{
 }
 
 .deserts .card-container .card{
-    flex:1 1 25rem;
+    flex:1 1 30rem;
     background: #fff;
     border-radius: 2rem;
     /* border: .1rem solid var(--pink); */
@@ -224,7 +224,7 @@ header label{
     margin: 1rem 0;
     padding: 1rem 3rem;    
     text-transform: uppercase;
-    letter-spacing: .1rem
+    letter-spacing: .2rem
 }
 
 .deserts .card-container .card .description{
