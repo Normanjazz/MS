@@ -194,6 +194,8 @@ header label{
 }
 
 .deserts .card-container .card{
+    width: 35rem;
+    height: 60rem;
     flex:1 1 30rem;
     background: #fff;
     border-radius: 2rem;
