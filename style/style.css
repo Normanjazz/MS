@@ -76,6 +76,10 @@ section{
     padding: 1rem;
 }
 
+/* ========================================================== */
+/* ----------------------HEADER SECTION---------------------- */
+/* ========================================================== */
+
 header{
     position: fixed;
     top: 0;left: 0;
@@ -125,6 +129,10 @@ header label{
     visibility: hidden;
     opacity: 0;
 }
+
+/* ========================================================== */
+/* ----------------------HOME SECTION---------------------- */
+/* ========================================================== */
 
 .home {
     display: flex;
@@ -182,43 +190,165 @@ header label{
 .home .content .btn{
     margin-top: 3rem;
 }
-
+/* ========================================================== */
+/* ----------------------DESERT SECTION---------------------- */
+/* ========================================================== */
 .deserts{
     background: #fff;
 }
 
-.deserts .card-container{
+.deserts .cards-container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.deserts .card-container .card{    
+.deserts .cards-container .card{
+    /* flex:1 1 30rem; */
+    width: 30rem;
+    height: 50rem;
+
+    margin: 1rem 1rem;
+    transition: .1s linear;
+}
+
+/* .deserts .cards-container .card:hover{
+    background: rgb(255, 241, 247); 
+    box-shadow: inset .1rem .2rem 1rem rgba(0,0,0,.25);
+} */
+
+.deserts .cards-container .card .card__inner{
+    border-radius: 2rem;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative; 
+    border-radius: 2rem;    
+    box-shadow: .1rem .2rem 2rem rgba(0,0,0,.25), .05rem 0 .1rem rgba(0,0,0,.25);
+}
+
+.is-flipped{
+    transform: rotateY(180deg);    
+}
+
+.deserts .cards-container .card .card__inner .card__face{    
+    border-radius: 2rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    }
+
+.deserts .cards-container .card .card__inner .card__face .card__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+
+.deserts .cards-container .card .card__inner .card__face .card__content img{
+    align-self: center;
+    box-shadow: .1rem .2rem 2rem rgba(0,0,0,.25);
+    height: 20rem;
+    margin: 1rem 0;
+    margin-top: 4rem;
+    border-radius: 50%;    
+}
+
+.deserts .cards-container .card .card__inner .card__face .card__content .name-container{
+    align-self: center;
+    align-items: center;    
+    padding: 0 3rem;  
+    height: 7.5rem;
+    display: flex;
+    justify-content: center;    
+}
+
+.deserts .cards-container .card .card__inner .card__face .card__content .name-container h3{
+    font-size: 2rem;
+    color: var(--purple);    
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.deserts .cards-container .card .card__inner .card__face .card__content .price{
+    align-self: center;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+    color: var(--pink);    
+    font-size: 2rem;
+    letter-spacing: 0.15rem;
+    text-align: center;
+}
+
+.deserts .cards-container .card .card__inner .card__face .card__content .btn{
+    align-self: center;
+    margin-top: 1.5rem;  
+}
+
+
+
+
+.deserts .cards-container .card .card__inner .card__face--back{    
+    transform: rotateY(180deg); 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--gradient);
+}
+
+.deserts .cards-container .card .card__inner .card__face--back .card__content{
+    padding: 0 3rem; 
+    height: 6rem;   
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    
+}
+
+.deserts .cards-container .card .card__inner .card__face--back .card__content p{
+    color: #ffffff;
+    font-family:Roboto;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center; 
+}
+
+/* ========================================================== */
+
+
+
+/*.deserts .cards-container .card{    
     flex:1 1 30rem;
     background: #fff;
-    border-radius: 2rem;
-    /* border: .1rem solid var(--pink); */
+    border-radius: 2rem;    
     box-shadow: .1rem .2rem 2rem rgba(0,0,0,.25), .05rem 0 .1rem rgba(0,0,0,.25);
     margin: 1.5rem;
     padding: 3rem 2rem;    
     text-align: center;
     transition: .2s linear;
-}
 
-.deserts .card-container .card:hover{   
+ .deserts .cards-container .card:hover{   
     background: rgb(255, 247, 250); 
     box-shadow: inset .1rem .2rem 1rem rgba(0,0,0,.25);    
 }
 
-.deserts .card-container .card img{
+.deserts .cards-container .card img{
     box-shadow: .1rem .2rem 2rem rgba(0,0,0,.25);
     height: 20rem;
     margin: 1rem 0;
     border-radius: 50%;
 }
 
-.deserts .card-container .card .name-container{  
+.deserts .cards-container .card .name-container{  
     padding: 0 3rem;  
     height: 7.5rem;
     display: flex;
@@ -226,14 +356,14 @@ header label{
     align-items: center;
 }
 
-.deserts .card-container .card h3{
+.deserts .cards-container .card h3{
     font-size: 2rem;
     color: var(--purple);    
     text-transform: uppercase;
     letter-spacing: .2rem
 }
 
-.deserts .card-container .card .description-container{
+.deserts .cards-container .card .description-container{
     padding: 0 3rem; 
     height: 6rem;   
     display: flex;
@@ -241,14 +371,13 @@ header label{
     align-items: flex-start;
 }
 
-.deserts .card-container .card .description{
-    /* margin: 2rem 0; */    
+.deserts .cards-container .card .description{     
     color: #656565;
     font-family:Roboto;
     font-size: 1.3rem;
     line-height: 2rem; 
 }
-.deserts .card-container .card .price{
+.deserts .cards-container .card .price{
     padding: 1rem 2rem;
     margin: 1rem 0;
     color: var(--pink);    
@@ -256,15 +385,26 @@ header label{
     letter-spacing: 0.15rem;     
 }
 
-.deserts .card-container .card .btn{
+.deserts .cards-container .card .btn{
     margin: 1rem 0;
-}
+} */
 
 
 
 
 
 
+
+
+
+
+
+/* ================================================================= */
+/* ================================================================= */
+/* ================================================================= */
+/* ================================================================= */
+/* ----------------------MEDIA QUERIES SECTION---------------------- */
+/* ================================================================= */
 
 
 /*media qeries*/
