@@ -4,7 +4,7 @@
 /* Подключаем свой шрифт */
 @font-face {
     font-family: GoodVibesPro; /* Гарнитура шрифта */
-    src: url(../style/GoodVibesPro.ttf); /* Путь к файлу со шрифтом */
+    src: url(../fonts/GoodVibesPro.ttf); /* Путь к файлу со шрифтом */
    }
 
 :root{
@@ -199,7 +199,7 @@ header label{
 
 .deserts .cards-container{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -212,11 +212,6 @@ header label{
     margin: 1rem 1rem;
     transition: .1s linear;
 }
-
-/* .deserts .cards-container .card:hover{
-    background: rgb(255, 241, 247); 
-    box-shadow: inset .1rem .2rem 1rem rgba(0,0,0,.25);
-} */
 
 .deserts .cards-container .card .card__inner{
     border-radius: 2rem;
@@ -303,6 +298,7 @@ header label{
     justify-content: center;
     align-items: center;
     background: var(--gradient);
+    box-shadow: .1rem .2rem 2rem rgba(0,0,0,.25), .05rem 0 .1rem rgba(0,0,0,.25);
 }
 
 .deserts .cards-container .card .card__inner .card__face--back .card__content{
