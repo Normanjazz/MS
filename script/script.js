@@ -8,12 +8,26 @@ for(var i=0; i< cards.length; i++){
 
 
 // создает из div c id = "into" изображения из папки img/gallery/ 
-let into = document.getElementById("into"), s = "";
-// Здесь нужна переменная для кол-ва фото в папке для i (написать!!!)
-for (let i = 1; i <= 18; ++i) {
-    s += `<div class="image-container"><img src="img/gallery/img (${i}).png"></div>`;
+let WeddingCacke = document.getElementById("WeddingCacke"), a = "";
+for (let i = 1; i <= 6; ++i) {
+    a += `<div class="image-container"><img src="img/gallery/WeddingCackes/img (${i}).png"></div>`;
     }
-into.innerHTML = s;
+WeddingCacke.innerHTML = a;
+
+let ChildCacke = document.getElementById("ChildCacke"), b = "";
+for (let i = 1; i <= 5; ++i) {
+    b += `<div class="image-container"><img src="img/gallery/ChildCackes/img (${i}).png"></div>`;
+    }
+ChildCacke.innerHTML = b;
+
+let MaleCacke = document.getElementById("MaleCacke"), c = "";
+for (let i = 1; i <= 9; ++i) {
+    c += `<div class="image-container"><img src="img/gallery/MaleCackes/img (${i}).png"></div>`;
+    }
+MaleCacke.innerHTML = c;
 
 
-//
+// Accordion
+
+document.querySelectorAll('.accordion-item--trigger').forEach((item) =>)
+

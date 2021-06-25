@@ -316,20 +316,30 @@ header label{
     text-align: center; 
 }
 
-.gallery .images{
+/* ========================================================== */
+/* ----------------------gallery/accordion SECTION------------*/
+/* ========================================================== */
+
+
+
+
+
+
+/* =====================gallery images block======================= */
+.accordion .images{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     grid-gap: 2rem; /*расстояние между элементами (margin)*/
 }
 
-.gallery .images .image-container{ 
+.accordion .images .image-container{ 
     border: .5rem solid white;
     border-radius: 1rem;
     overflow:hidden; /* маска для скругленных краев, также не даст увеличиваться изображению при hover (точнее не даст изображению выйти за края контейнера*/ 
     box-shadow: .1rem .1rem 1rem rgba(0,0,0,.25);  
 }
 
-.gallery .images .image-container img{
+.accordion .images .image-container img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -337,76 +347,13 @@ header label{
     cursor: pointer;
 }
 
-.gallery .images .image-container img:hover{
+.accordion .images .image-container img:hover{
     transform: scale(1.2);
 }
 
-/* ========================================================== */
 
 
 
-/*.deserts .cards-container .card{    
-    flex:1 1 30rem;
-    background: #fff;
-    border-radius: 2rem;    
-    box-shadow: .1rem .2rem 2rem rgba(0,0,0,.25), .05rem 0 .1rem rgba(0,0,0,.25);
-    margin: 1.5rem;
-    padding: 3rem 2rem;    
-    text-align: center;
-    transition: .2s linear;
-
- .deserts .cards-container .card:hover{   
-    background: rgb(255, 247, 250); 
-    box-shadow: inset .1rem .2rem 1rem rgba(0,0,0,.25);    
-}
-
-.deserts .cards-container .card img{
-    box-shadow: .1rem .2rem 2rem rgba(0,0,0,.25);
-    height: 20rem;
-    margin: 1rem 0;
-    border-radius: 50%;
-}
-
-.deserts .cards-container .card .name-container{  
-    padding: 0 3rem;  
-    height: 7.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.deserts .cards-container .card h3{
-    font-size: 2rem;
-    color: var(--purple);    
-    text-transform: uppercase;
-    letter-spacing: .2rem
-}
-
-.deserts .cards-container .card .description-container{
-    padding: 0 3rem; 
-    height: 6rem;   
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.deserts .cards-container .card .description{     
-    color: #656565;
-    font-family:Roboto;
-    font-size: 1.3rem;
-    line-height: 2rem; 
-}
-.deserts .cards-container .card .price{
-    padding: 1rem 2rem;
-    margin: 1rem 0;
-    color: var(--pink);    
-    font-size: 2rem;
-    letter-spacing: 0.15rem;     
-}
-
-.deserts .cards-container .card .btn{
-    margin: 1rem 0;
-} */
 
 
 
