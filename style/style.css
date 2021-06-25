@@ -209,7 +209,6 @@ header label{
     /* flex:1 1 30rem; */
     width: 30rem;
     height: 50rem;
-
     margin: 2rem 2rem;
     transition: .1s linear;
 }
@@ -315,6 +314,34 @@ header label{
     font-size: 2rem;
     line-height: 3rem;
     text-align: center; 
+}
+
+
+.gallery .images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.gallery .images .image{
+    flex:1 1 23rem;
+    /* display: block; */
+    margin: .5rem;
+    width: 150px; 
+    height: 280px;
+    overflow:hidden; 
+    border: 2px solid white;
+    border-radius: 5%;  
+    box-shadow: .1rem .1rem 1rem rgba(0,0,0,.25), .05rem 0 .1rem rgba(0,0,0,.25);      
+}
+
+.gallery .images .image img{
+    display: block;    
+    max-width: 100%;    
+    margin: auto;
+    top:50%;
+    left:50%;       
 }
 
 /* ========================================================== */
