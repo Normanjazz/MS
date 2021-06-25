@@ -3,9 +3,9 @@
 
 /* Подключаем свой шрифт */
 @font-face {
-    font-family: GoodVibesPro; /* Гарнитура шрифта */
-    src: url(../fonts/GoodVibesPro.ttf); /* Путь к файлу со шрифтом */
-   }
+	font-family: 'GoodVibesPro';
+	src: url('/fonts/GoodVibesPro.ttf');
+}
 
 :root{
     --purple:#814096;
