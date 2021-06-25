@@ -4,11 +4,7 @@
 /* Подключаем свой шрифт */
 @font-face {
 	font-family: 'GoodVibesPro';
-<<<<<<< Updated upstream
 	src: url('../fonts/GoodVibesPro.ttf');
-=======
-	src: url('/../fonts/GoodVibesPro.ttf');
->>>>>>> Stashed changes
 }
 
 :root{
