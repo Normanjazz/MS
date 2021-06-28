@@ -323,12 +323,14 @@ header label{
 .accordion .accordion-item--trigger{
     background-color: var(--purple);
     color: #fff;
+    font-family: roboto;
     font-size: 2rem;
     cursor: pointer;
     padding: 1rem;
     width: 100%;
     text-align: center;
     border: 0.1rem solid white;
+    border-radius: 1rem;
     outline: none;
     transition: .3s;
 }
@@ -347,7 +349,6 @@ header label{
     display: block;
    
 }
-
 
 /* =====================gallery images block======================= */
 .accordion .images{
