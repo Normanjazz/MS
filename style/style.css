@@ -340,9 +340,19 @@ header label{
     transition: .3s;
 }
 
+.accordion .accordion-item--trigger::after{
+    content: "+";
+    position: absolute;
+    right: 10%;
+}
+
 .accordion .accordion-item--trigger.active,
 .accordion .accordion-item--trigger:hover{
     background-color: var(--pink);
+}
+
+.accordion .accordion-item--trigger.active::after{
+    content: "-";    
 }
 
 .accordion .accordion-item--content{    
