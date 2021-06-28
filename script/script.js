@@ -20,14 +20,22 @@ for (let i = 1; i <= 5; ++i) {
     }
 ChildCacke.innerHTML = b;
 
-let MaleCacke = document.getElementById("MaleCacke"), c = "";
-for (let i = 1; i <= 9; ++i) {
-    c += `<div class="image-container"><img src="img/gallery/MaleCackes/img (${i}).png"></div>`;
-    }
-MaleCacke.innerHTML = c;
+// let MaleCacke = document.getElementById("MaleCacke"), c = "";
+// for (let i = 1; i <= 9; ++i) {
+//     c += `<div class="image-container"><img src="img/gallery/MaleCackes/img (${i}).png"></div>`;
+//     }
+// MaleCacke.innerHTML = c;
 
 
 // Accordion
+var acc = document.getElementsByClassName("accordion-item--trigger");
+var i;
+for (i = 0; i <acc.length; i++){
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+    }
+}
 
-document.querySelectorAll('.accordion-item--trigger').forEach((item) =>)
+
 

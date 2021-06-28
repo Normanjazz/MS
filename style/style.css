@@ -309,7 +309,7 @@ header label{
 }
 
 .deserts .cards-container .card .card__inner .card__face--back .card__content p{
-    color: #ffffff;
+    color: #fff;
     font-family:Roboto;
     font-size: 2rem;
     line-height: 3rem;
@@ -320,9 +320,33 @@ header label{
 /* ----------------------gallery/accordion SECTION------------*/
 /* ========================================================== */
 
+.accordion .accordion-item--trigger{
+    background-color: var(--purple);
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border: 0.1rem solid white;
+    outline: none;
+    transition: .3s;
+}
 
+.accordion .accordion-item--trigger.active,
+.accordion .accordion-item--trigger:hover{
+    background-color: var(--pink);
+}
 
+.accordion .accordion-item--content{
+    display: none;
+    
+}
 
+.accordion .accordion-item--content.show{
+    display: block;
+   
+}
 
 
 /* =====================gallery images block======================= */
