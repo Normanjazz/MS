@@ -28,13 +28,31 @@ MaleCacke.innerHTML = c;
 
 
 // Accordion
-var acc = document.getElementsByClassName("accordion-item--trigger");
-var i;
-for (i = 0; i <acc.length; i++){
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
-    }
+
+// var accordions = document.querySelectorAll('.accordion-item--trigger');
+// var i;
+// for (i = 0; i <acc.length; i++){
+//     acc[i].onclick = function(){
+//         this.classList.toggle("active");
+//         this.nextElementSibling.classList.toggle("show");
+//     }
+// }
+
+var accordions = document.querySelectorAll('.accordion-item--trigger');
+for(item of accordions) {
+    item.addEventListener('click', function()  {
+        if (this.classList.contains('active')) {
+            this.classList.remove('active');
+            this.nextElementSibling.classList.remove("show");
+        } else {
+            for(el of accordions) {
+                el.classList.remove('active')
+                el.nextElementSibling.classList.remove('show')
+            }
+            this.classList.add('active');
+            this.nextElementSibling.classList.add("show");
+        }   
+    })    
 }
 
 
