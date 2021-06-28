@@ -320,6 +320,8 @@ header label{
 /* ----------------------gallery/accordion SECTION------------*/
 /* ========================================================== */
 
+/* =================accordion creation======================= */
+
 .accordion-item{
     margin: 0.2rem 0;
 }
@@ -329,8 +331,7 @@ header label{
     font-family: roboto;
     font-size: 2rem;
     cursor: pointer;
-    padding: 1rem;
-    /* margin-bottom: 1rem; */
+    padding: 1rem;    
     width: 100%;
     text-align: center;
     border: 0.1rem solid white;
@@ -344,18 +345,16 @@ header label{
     background-color: var(--pink);
 }
 
-.accordion .accordion-item--content{
-    margin: .5rem 0;
-    display: none;
-    
+.accordion .accordion-item--content{    
+    display: none;    
 }
 
 .accordion .accordion-item--content.show{
     display: block;
-   
+    margin: .5rem 0;    
 }
 
-/* =====================gallery images block======================= */
+/* =================gallery images stylize======================= */
 .accordion .images{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
