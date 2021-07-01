@@ -1,59 +1,45 @@
 // По клику на карточку -  на каждый класс '.card__inner' в документе вешается класс 'is-flipped'
-var cards = document.querySelectorAll('.card__inner');
-for(var i=0; i< cards.length; i++){
-    cards[i].addEventListener('click', function(){
-        this.classList.toggle('is-flipped');
-    });
+function cardFlipper(){
+    var cards = document.querySelectorAll('.card__inner');
+    for(var i=0; i< cards.length; i++){
+        cards[i].addEventListener('click', function(){
+            this.classList.toggle('is-flipped');
+        });
+    }
 }
+cardFlipper()
 
-
-// создает из div c id = "into" изображения из папки img/gallery/ 
-let WeddingCacke = document.getElementById("WeddingCacke"), a = "";
-for (let i = 1; i <= 6; ++i) {
-    a += `<div class="image-container"><img src="img/gallery/WeddingCackes/img (${i}).png"></div>`;
-    }
-WeddingCacke.innerHTML = a;
-
-let ChildCacke = document.getElementById("ChildCacke"), b = "";
-for (let i = 1; i <= 5; ++i) {
-    b += `<div class="image-container"><img src="img/gallery/ChildCackes/img (${i}).png"></div>`;
-    }
-ChildCacke.innerHTML = b;
-
-let MaleCacke = document.getElementById("MaleCacke"), c = "";
-for (let i = 1; i <= 9; ++i) {
-    c += `<div class="image-container"><img src="img/gallery/MaleCackes/img (${i}).png"></div>`;
-    }
-MaleCacke.innerHTML = c;
-
+//Динамическое создание div с картинками из дерриктории
+function createGallery(imageID, imageCount){
+    let Myimages = document.getElementById(imageID), a = "";
+    for (let i = 1; i <= imageCount; ++i) {
+        a += `<div class="image-container"><img src="img/gallery/${imageID}/img (${i}).png"></div>`;
+        }
+    Myimages.innerHTML = a;
+}
+createGallery("WeddingCackes", 6)
+createGallery("ChildCackes", 5)
+createGallery("MaleCackes", 9)
 
 // Accordion
-
-// var accordions = document.querySelectorAll('.accordion-item--trigger');
-// var i;
-// for (i = 0; i <acc.length; i++){
-//     acc[i].onclick = function(){
-//         this.classList.toggle("active");
-//         this.nextElementSibling.classList.toggle("show");
-//     }
-// }
-
-var accordions = document.querySelectorAll('.accordion-item--trigger');
-for(item of accordions) {
-    item.addEventListener('click', function()  {
-        if (this.classList.contains('active')) {
-            this.classList.remove('active');
-            this.nextElementSibling.classList.remove("show");
-        } else {
-            for(el of accordions) {
-                el.classList.remove('active')
-                el.nextElementSibling.classList.remove('show')
-            }
-            this.classList.add('active');
-            this.nextElementSibling.classList.add("show");
-        }   
-    })    
+function Accordion(){
+    var accordions = document.querySelectorAll('.accordion-item--trigger');
+    for(item of accordions) {
+        item.addEventListener('click', function()  {
+            if (this.classList.contains('active')) {
+                this.classList.remove('active');
+                this.nextElementSibling.classList.remove("show");
+            } else {
+                for(el of accordions) {
+                    el.classList.remove('active')
+                    el.nextElementSibling.classList.remove('show')
+                }
+                this.classList.add('active');
+                this.nextElementSibling.classList.add("show");
+            }   
+        })    
+    }
 }
-
+Accordion()
 
 
