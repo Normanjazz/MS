@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Свадебные торты",
+        "imagesID": "WeddingCackes",
+        "PicCount": 6
+    },
+    {
+        "title": "Детские торты",
+        "imagesID": "ChildCackes",
+        "PicCount": 5
+    },
+    {
+        "title": "Мужские торты",
+        "imagesID": "MaleCackes",
+        "PicCount": 6
+    }    
+]

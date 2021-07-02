@@ -324,6 +324,8 @@ header label{
 
 .accordion-item{
     margin: 0.2rem 0;
+    
+     
 }
 .accordion .accordion-item--trigger{    
     background-color: var(--purple);
@@ -331,11 +333,13 @@ header label{
     font-family: roboto;
     font-size: 2rem;
     cursor: pointer;
-    padding: 1rem;    
+    padding: 1rem;
+    margin: .1rem 0;    
     width: 100%;
     text-align: center;
-    border: 0.1rem solid white;
+    border: 0.5rem solid white;
     border-radius: 1rem;
+    box-shadow: .1rem .1rem 1rem rgba(0,0,0,.25); 
     outline: none;    
 }
 
@@ -354,8 +358,8 @@ header label{
     content: "-";    
 }
 
-.accordion .accordion-item--content{    
-    display: none;    
+.accordion .accordion-item--content{      
+    display: none;     
 }
 
 .accordion .accordion-item--content.show{
@@ -367,10 +371,10 @@ header label{
 .accordion .images{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    grid-gap: .5rem; /*расстояние между элементами (margin)*/
+    grid-gap: .5rem; /*расстояние между элементами (margin)*/    
 }
 
-.accordion .images .image-container{ 
+.accordion .images .image-container{     
     border: .5rem solid white;
     border-radius: 1rem;
     overflow:hidden; /* маска для скругленных краев, также не даст увеличиваться изображению при hover (точнее не даст изображению выйти за края контейнера*/ 

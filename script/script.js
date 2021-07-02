@@ -10,16 +10,18 @@ function cardFlipper(){
 cardFlipper()
 
 //Динамическое создание div с картинками из дерриктории
-function createGallery(imageID, imageCount){
+// ID изображения должны совпадать с именем подпапки, где лежат картинки
+// imageCount - кол-во изображений в папке (???сделать автоматически???)
+function createGalleryPart(imageID, imageCount){
     let Myimages = document.getElementById(imageID), a = "";
     for (let i = 1; i <= imageCount; ++i) {
         a += `<div class="image-container"><img src="img/gallery/${imageID}/img (${i}).png"></div>`;
         }
     Myimages.innerHTML = a;
 }
-createGallery("WeddingCackes", 6)
-createGallery("ChildCackes", 5)
-createGallery("MaleCackes", 9)
+createGalleryPart("WeddingCackes", 6)
+createGalleryPart("ChildCackes", 5)
+createGalleryPart("MaleCackes", 9)
 
 // Accordion
 function Accordion(){
@@ -41,5 +43,3 @@ function Accordion(){
     }
 }
 Accordion()
-
-
