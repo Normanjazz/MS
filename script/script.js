@@ -9,6 +9,36 @@ function cardFlipper(){
 }
 cardFlipper()
 
+//================динамическое создание accordion-item =============
+const accordionWrapper=document.querySelector('.accordion-wrapper');
+//JSON
+const contentData = [
+    {"title": "Свадебные торты", "imagesID": "WeddingCackes", "imageCount": 6 },
+    {"title": "Детские торты", "imagesID": "ChildCackes", "imageCount": 5},
+    {"title": "Мужские торты", "imagesID": "MaleCackes", "imageCount": 6}    
+]
+
+// Функция создает шаблон HTML элементов согласно JSON (contentData)
+const createTemplate = item => { 
+    return `
+        <div class="accordion-item">
+            <button class="accordion-item--trigger">${item.title}</button>
+            <div class="accordion-item--content">
+                <div class="images" id="${item.imagesID}"></div> 
+            </div>   
+        </div>
+    `    
+}
+
+// Функция вносит accordion-item в HTML
+const fillHtmlList = () => {
+    contentData.forEach(item => {
+        accordionWrapper.innerHTML += createTemplate(item);
+    })
+}
+
+fillHtmlList();
+
 //Динамическое создание div с картинками из дерриктории
 // ID изображения должны совпадать с именем подпапки, где лежат картинки
 // imageCount - кол-во изображений в папке (???сделать автоматически???)
@@ -22,6 +52,8 @@ function createGalleryPart(imageID, imageCount){
 createGalleryPart("WeddingCackes", 6)
 createGalleryPart("ChildCackes", 5)
 createGalleryPart("MaleCackes", 9)
+
+//==========================================================================
 
 // Accordion
 function Accordion(){
