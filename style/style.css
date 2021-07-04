@@ -171,11 +171,10 @@ header label{
     color: #656565;
 }
 
-.home .content h3{
-    
+.home .content h3{    
     font-size: 5rem;    
     text-transform: uppercase;
-    letter-spacing: .2rem; 
+    letter-spacing: .3rem; 
     margin-bottom: 1rem;   
 }
 
