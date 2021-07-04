@@ -38,7 +38,7 @@ const createDesertTemplate = item => {
                             <h3>${item.name}</h3>
                         </div> 
                         <p class="price">${item.price}</p>
-                        <a class="btn" id="desert_btn">Подробнее</a> 
+                        <a class="card_btn btn" id="desert_btn">Подробнее</a> 
                     </div> 
                 </div>
                 <div class="card__face card__face--back">

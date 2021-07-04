@@ -5,6 +5,11 @@
 @font-face {
 	font-family: 'GoodVibesPro';
 	src: url('../fonts/GoodVibesPro.ttf');
+    font-family: 'Handelson';
+	src: url('../fonts/Handelson-1CYR.otf');
+    /* font-family: 'CoinyCyrillic';
+	src: url('../fonts/CoinyCyrillic.otf'); */
+
 }
 
 :root{
@@ -38,7 +43,8 @@ body{
     background: #f9f9f9;
 }
 
-section{   
+section{
+    background: #fff;   
     height: auto;
     padding: 0 8%; /* задаем размер секций на 8% уже, чем у документа*/
     padding-top: 7rem;
@@ -65,13 +71,14 @@ section{
 }
 
 .heading{ /* делаем ЗАГОЛОВКИ СЕКЦИЙ с градиентной заливкой*/
+    font-family: 'Handelson';
+    text-transform: uppercase;
     text-align: center;
     background: var(--gradient);    
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    font-size: 5rem;
-    text-transform: uppercase;
+    font-size: 5rem;    
     letter-spacing: 0.2rem;
     padding: 1rem;
 }
@@ -166,6 +173,7 @@ header label{
 }
 
 .home .content h3{
+    font-family: 'Handelson';
     font-size: 5rem;    
     text-transform: uppercase;
     letter-spacing: .2rem; 
@@ -173,6 +181,7 @@ header label{
 }
 
 .home .content h3 span{
+    font-family: 'Handelson';
     color: var(--pink);
     text-transform: uppercase;
     
@@ -196,7 +205,7 @@ header label{
 /* ----------------------DESERT SECTION---------------------- */
 /* ========================================================== */
 .deserts{
-    background: #fff;
+    
 }
 
 .deserts .cards-container{
@@ -223,11 +232,12 @@ header label{
     cursor: pointer;
     position: relative; 
     border-radius: 2rem;    
-    box-shadow: .1rem .2rem 2rem rgba(0,0,0,.25), .05rem 0 .1rem rgba(0,0,0,.25);
+    box-shadow: .1rem .2rem 2rem rgba(0,0,0,.25), .05rem 0 .1rem rgba(0,0,0,.25);    
 }
 
-.is-flipped{
-    transform: rotateY(180deg);    
+.is-flipped{    
+    transform: rotateY(180deg);
+       
 }
 
 .deserts .cards-container .card .card__inner .card__face{    
@@ -327,10 +337,9 @@ header label{
    
 }
 .accordion-item{
-    margin: 0.2rem 0;
-    
-     
+    margin: 0.2rem 0;   
 }
+
 .accordion .accordion-item--trigger{    
     background-color: var(--purple);
     color: #fff;
