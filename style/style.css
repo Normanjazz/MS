@@ -5,8 +5,8 @@
 @font-face {
 	font-family: 'GoodVibesPro';
 	src: url('../fonts/GoodVibesPro.ttf');
-    font-family: 'Handelson';
-	src: url('../fonts/Handelson-1CYR.otf');
+    /* font-family: 'Handelson';
+	src: url('../fonts/Handelson-1CYR.otf'); */
     /* font-family: 'CoinyCyrillic';
 	src: url('../fonts/CoinyCyrillic.otf'); */
 
@@ -70,8 +70,7 @@ section{
     transform: scale(1.05);
 }
 
-.heading{ /* делаем ЗАГОЛОВКИ СЕКЦИЙ с градиентной заливкой*/
-    font-family: 'Handelson';
+.heading{ /* делаем ЗАГОЛОВКИ СЕКЦИЙ с градиентной заливкой*/    
     text-transform: uppercase;
     text-align: center;
     background: var(--gradient);    
@@ -173,15 +172,14 @@ header label{
 }
 
 .home .content h3{
-    font-family: 'Handelson';
+    
     font-size: 5rem;    
     text-transform: uppercase;
     letter-spacing: .2rem; 
     margin-bottom: 1rem;   
 }
 
-.home .content h3 span{
-    font-family: 'Handelson';
+.home .content h3 span{    
     color: var(--pink);
     text-transform: uppercase;
     
