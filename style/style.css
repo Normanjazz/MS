@@ -276,7 +276,7 @@ header label{
     justify-content: center;    
 }
 
-.deserts .cards-container .card .card__inner .card__face .card__content .name-container h3{
+.deserts .cards-container .card .card__inner .card__face .card__content .name-container h3{    
     font-size: 2rem;
     color: var(--purple);    
     text-transform: uppercase;
