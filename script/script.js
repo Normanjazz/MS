@@ -1,6 +1,4 @@
-
 //================динамическое создание Десертов ===================
-
 const cardWrapper=document.querySelector('.cards-container');
 //JSON
 const desertContentData = [
@@ -75,8 +73,8 @@ function cardFlipper(){
 cardFlipper()
 
 //==================================================================
-
 //================динамическое создание accordion-item =============
+
 const accordionWrapper=document.querySelector('.accordion-wrapper');
 //JSON
 const gallaryContentData = [
@@ -120,7 +118,6 @@ const fillHtmlListPic = () => {
 fillHtmlListPic();
 
 //==========================================================================
-
 // Accordion
 function Accordion(){
     var accordions = document.querySelectorAll('.accordion-item--trigger');
