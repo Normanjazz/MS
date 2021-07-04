@@ -214,8 +214,13 @@ header label{
     width: 30rem;
     height: 50rem;
     margin: 2rem 2rem;
-    transition: .1s linear;
+    transition: .2s linear;
 }
+
+.deserts .cards-container .card:hover{
+    transform: scale(1.03);
+}
+
 
 .deserts .cards-container .card .card__inner{
     border-radius: 2rem;
