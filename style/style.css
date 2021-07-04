@@ -38,8 +38,8 @@ body{
     background: #f9f9f9;
 }
 
-section{
-    min-height: 100vh;
+section{   
+    height: auto;
     padding: 0 8%; /* задаем размер секций на 8% уже, чем у документа*/
     padding-top: 7rem;
 }
@@ -135,6 +135,7 @@ header label{
 /* ========================================================== */
 
 .home {
+    min-height: 100vh;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -322,6 +323,9 @@ header label{
 
 /* =================accordion creation======================= */
 
+.accordion{
+   
+}
 .accordion-item{
     margin: 0.2rem 0;
     
