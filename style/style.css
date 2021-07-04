@@ -180,8 +180,7 @@ header label{
 
 .home .content h3 span{    
     color: var(--pink);
-    text-transform: uppercase;
-    
+    text-transform: uppercase;    
 }
 
 .home .content p{
