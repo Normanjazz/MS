@@ -202,9 +202,7 @@ header label{
 /* ========================================================== */
 /* ----------------------DESERT SECTION---------------------- */
 /* ========================================================== */
-.deserts{
-    
-}
+
 
 .deserts .cards-container{
     display: flex;
@@ -331,9 +329,6 @@ header label{
 
 /* =================accordion creation======================= */
 
-.accordion{
-   
-}
 .accordion-item{
     margin: 0.2rem 0;   
 }
