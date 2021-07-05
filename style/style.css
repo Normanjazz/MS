@@ -396,12 +396,12 @@ header label{
     object-fit: cover; /*растягивает картинку под размер контейнера*/
     transition: all 0.7s ease-out;
     cursor: pointer;
+    align-self: flex-start;
 }
 
-.accordion .images .image-container img:hover{
+/* .accordion .images .image-container img:hover{
     transform: scale(1.2);
-}
-
+} */
 
 
 

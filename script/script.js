@@ -121,7 +121,7 @@ const fillHtmlListPic = () => {
     gallaryContentData.forEach(item => {
         let Myimages = document.getElementById(item.imagesID), a = "";;
         for (let i = 1; i <= item.imageCount; ++i) {
-            a += `<div class="image-container"><img src="img/gallery/${item.imagesID}/img (${i}).png"></div>`;
+            a += `<div class="image-container"><img class="slide-right-parallax" src="img/gallery/${item.imagesID}/img (${i}).png"></div>`;
             }
         Myimages.innerHTML = a;           
     })
@@ -164,3 +164,11 @@ for (let smoothLink of smoothLinks) {
         });
     });
 };
+
+
+// =====================Parallax CDNjs=============================
+var image = document.getElementsByClassName('slide-right-parallax');
+new simpleParallax(image, {
+	orientation: 'right'
+});
+// ================================================================
