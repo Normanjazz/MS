@@ -1,4 +1,14 @@
 
+var typed = new Typed('.typing-text', {
+    strings : ['Торты', 'Капкейки', 'Трайфлы', 'Кейкпопсы', 'Трюфели', 'Макаронс'], 
+    loop : true,
+    typeSpeed : 100,
+    // shuffle : true,
+    backSpeed : 100, // стирание написанного как бэкспейс    
+    fadeOut : true, // Заменяет эффект бэкспейс на затухание
+    
+});
+
 //================динамическое создание Десертов ===================
 const cardWrapper=document.querySelector('.cards-container');
 //JSON
