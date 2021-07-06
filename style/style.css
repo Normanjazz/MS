@@ -491,13 +491,15 @@ header label{
         display: flex;
         flex-direction: column; /* выстраивает эл-ты в столбец*/
         justify-content: center;
-        align-items: center;        
+        align-items: center;
+        margin-top: 24rem;        
     }
 
     .home .content h3{
-        font-size: 3.6rem;   
+        font-size: 3.6rem;
+        justify-content: center;   
         text-align: center; 
-        margin-top: 20rem;                
+                        
     }
 
     .home .content p{
@@ -506,7 +508,5 @@ header label{
         margin-bottom: 5rem;  
     }
 
-    .home .content .btn{
-        margin-top: 3rem;
-    }
+    
 }
