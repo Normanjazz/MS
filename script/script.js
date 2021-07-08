@@ -4,37 +4,28 @@ const navSlide = ()=>{
     const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.navbar a');
 
-    burger.addEventListener('click', ()=>{
-        //Toggle nav
+    // Функция burgerToggle, которая ниже будет вызываться другими функциями
+    function burgerToggle(){
+        //вызов/скрытие меню
         navbar.classList.toggle('navbar-active');
-        //Animate links
+        //Анимация появления элементов меню
         navLinks.forEach((link, index)=>{
             if(link.style.animation){ // если на ссылках уже есть анимация
-                link.style.animation = ''
-            }
+                link.style.animation = ''}
             else{
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +0.3}s`
-            } 
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +0.3}s`} 
         })
-        //burger animation
+        //Анимация значка меню (бургер-крестик)
         burger.classList.toggle('toggle');
-    })
-    // Закрытие меню после нажатия нассылку
+    }
+
+    // Нажатие на иконку меню
+    burger.addEventListener('click', burgerToggle);
+
+    // Закрытие меню после нажатия на элемент меню
     navLinks.forEach((link) =>{
-        link.addEventListener('click', () =>{
-            navbar.classList.remove('navbar-active');
-            burger.classList.remove('toggle');
-            navLinks.forEach((link, index)=>{
-                if(link.style.animation){ // если на ссылках уже есть анимация
-                    link.style.animation = ''
-                }
-                else{
-                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +0.3}s`
-                } 
-            })
-               
-        })
-    })
+        link.addEventListener('click', burgerToggle)});
+
 }
 
 navSlide()
