@@ -18,7 +18,7 @@
     --gradient:linear-gradient(90deg, var(--purple), var(--pink));    
 }
 
-*{
+*{    
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
@@ -40,7 +40,8 @@ html{
 }
 
 body{
-    background: #f9f9f9;
+    
+    background: #fff;
 }
 
 section{
@@ -91,7 +92,7 @@ header{
     top: 0;left: 0;
     width: 100%;
     /* background: #fff; */
-    background: rgba(255,255,255,.9);
+    background: rgba(255,255,255,.97);
     box-shadow: 0.5rem .4rem rgba(0,0,0,.1);
     padding: 2rem 9%; /* отступы от краёв*/
     display: flex;
@@ -255,6 +256,9 @@ header .navbar a:hover{
 /* ----------------------DESERT SECTION---------------------- */
 /* ========================================================== */
 
+.deserts {
+    margin-top: 7rem;
+}
 
 .deserts .cards-container{
     display: flex;
