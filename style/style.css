@@ -124,17 +124,29 @@ header .navbar a:hover{
     text-underline-offset: .5rem;
 }
 
-header input {
+.burger{
     display: none;
 }
 
-header label{
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: var(--purple);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* header input {
+    display: none;
+} */
+
+/* header label{
     font-size: 3rem;
     color: var(--purple);
     cursor: pointer;
     visibility: hidden;
     opacity: 0;
-}
+} */
 
 /* ========================================================== */
 /* ----------------------HOME SECTION---------------------- */
@@ -485,41 +497,63 @@ header label{
     
 }
 @media (max-width:768px){
-    header label{        
-        visibility: visible;
-        opacity: 1;
+
+    header .burger{
+        display: block;
+        cursor: pointer;
     }
 
-    header .navbar{
+    .navbar{
         position: absolute;
-        top: 100%; left: 0;
-        width: 100%;
-        /* background: #fff; */
-        background: rgba(255,255,255,.7);
-        padding: 1rem 2rem;
+        right: 0;
+        top: 100%;
+        width: 100%; 
+        background: rgba(255,255,255,.95);
         border-top: .1rem solid rgba(0,0,0,.2);
         box-shadow: .5rem .5rem rgba(0,0,0,.1);
-        transform-origin: top; /*top - это anchor point относительно которого происходит трансформация*/
-        transform: scaleY(0); /* исчезновение */
-        opacity: 0;
-        transition: .2s linear;/* плавная анимация появления/исчезновения */
-    }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 2rem;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+    }    
     
     header .navbar a{
+        opacity: 0;
         display: block;
         margin: 2rem 0;
         font-family:Roboto;
-        font-size: 2rem;        
+        font-size: 2rem;
     }
 
-    header input:checked ~ .navbar{
-        transform: scaleY(1);
-        opacity: 1;        
+    .navbar-active{
+        transform: translateX(0%);    
     }
 
-    header input:checked ~ label::before{
-        content: '\f00d'; /*крестик в FontAwsome*/
+    @keyframes navLinkFade {
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
     }
+
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2{
+      opacity: 0; 
+    }
+
+    .toggle .line3{
+        transform: rotate(45deg) translate(-5px, -6px); 
+    }
+
 
     .home{
         /* flex-direction: column-reverse; */  

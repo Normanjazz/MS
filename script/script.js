@@ -1,3 +1,29 @@
+
+const navSlide = ()=>{
+    const burger = document.querySelector('.burger');
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.navbar a');
+
+    burger.addEventListener('click', ()=>{
+        //Toggle nav
+        navbar.classList.toggle('navbar-active');
+        //Animate links
+        navLinks.forEach((link, index)=>{
+            if(link.style.animation){ // если на ссылках уже есть анимация
+                link.style.animation = ''
+            }
+            else{
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +0.3}s`
+            }
+        })
+        //burger animation
+        burger.classList.toggle('toggle');
+    })
+}
+
+navSlide()
+
+
 //Эффект набора текста в оффере
 var typed = new Typed('.typing-text', {
     strings : ['Торты', 'Капкейки', 'Трайфлы', 'Кейкпопсы', 'Трюфели', 'Макаронс'], 
