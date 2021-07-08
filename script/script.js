@@ -14,14 +14,35 @@ const navSlide = ()=>{
             }
             else{
                 link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +0.3}s`
-            }
+            } 
         })
         //burger animation
         burger.classList.toggle('toggle');
     })
+    // Закрытие меню после нажатия нассылку
+    navLinks.forEach((link) =>{
+        link.addEventListener('click', () =>{
+            navbar.classList.remove('navbar-active');
+            burger.classList.remove('toggle');
+            navLinks.forEach((link, index)=>{
+                if(link.style.animation){ // если на ссылках уже есть анимация
+                    link.style.animation = ''
+                }
+                else{
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +0.3}s`
+                } 
+            })
+               
+        })
+    })
 }
 
 navSlide()
+
+
+
+
+
 
 
 //Эффект набора текста в оффере
