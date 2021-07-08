@@ -98,13 +98,14 @@ const gallaryContentData = [
 // Функция создает шаблон HTML элементов согласно JSON (gallaryContentData)
 const createTemplate = item => { 
     return `
-        <div class="accordion-item">
-            <button class="accordion-item--trigger">${item.title}</button>
+        <div id="${item.imagesID} class="accordion-item">
+        <a href="#${item.imagesID}" class="accordion-item--trigger">${item.title}</a>
             <div class="accordion-item--content">
                 <div class="images" id="${item.imagesID}"></div> 
             </div>   
         </div>
-    `    
+    `  
+  
 }
 
 // Функция вносит accordion-item в HTML
