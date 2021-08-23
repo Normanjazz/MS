@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/calc.css">
+    <title>CakePriceCalc</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Start header section -->
+        <header>        
+            <h1>Калькулятор себестоимости кондитерских изделий</h1> 
+            <h2>ИТОГОВАЯ СЕБЕСТОИМОСТЬ ИЗДЕЛИЯ: <br><span class="total_price">1000р</span></h2>   
+        </header>
+        <!-- End header section -->
+        
+        <!-- Start products section -->
+        <section class="products">
+            <h1 class="heading">Продукты</h1>
+            <p class="tableheaders">___ПРОДУКТЫ____________ЕД.ИЗМ____КОЛ-ВО____СТОИМОСТЬ</p>
+            <div class="product-item">               
+                 <select id="">
+                    <option></option>                    
+                    <option>Масло сливочное</option>                    
+                    <option>Молоко</option>                    
+                    <option>Сахарная пудра</option>                    
+                    <option>Разрыхлитель</option>                    
+                </select>
+                <label class="lbl_units" id="">гр.</label> 
+                <input class="qty" type="text" id="">
+                <label class="lbl_total_cost" id="">125р</label>     
+            </div>
+                
+        </section>
+        <!-- End products section -->
+
+    </div>
+    <script src="./script/calc.js"></script>
+</body>
+</html>

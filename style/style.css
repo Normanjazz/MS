@@ -5,12 +5,14 @@
 @font-face {
 	font-family: 'GoodVibesPro';
 	src: url('../fonts/GoodVibesPro.ttf');
-    /* font-family: 'Handelson';
-	src: url('../fonts/Handelson-1CYR.otf'); */
-    /* font-family: 'CoinyCyrillic';
-	src: url('../fonts/CoinyCyrillic.otf'); */
-
 }
+
+/* @font-face {    
+    font-family: 'Kapelka';
+	src: url('../fonts/Kapelka.ttf');
+}    */
+
+
 
 :root{
     --purple:#814096;
@@ -83,6 +85,8 @@ section{
     padding: 1rem;
 }
 
+
+
 /* ========================================================== */
 /* ----------------------HEADER SECTION---------------------- */
 /* ========================================================== */
@@ -137,17 +141,6 @@ header .navbar a:hover{
     transition: all 0.3s ease;
 }
 
-/* header input {
-    display: none;
-} */
-
-/* header label{
-    font-size: 3rem;
-    color: var(--purple);
-    cursor: pointer;
-    visibility: hidden;
-    opacity: 0;
-} */
 
 /* ========================================================== */
 /* ----------------------HOME SECTION---------------------- */
@@ -184,14 +177,14 @@ header .navbar a:hover{
     color: #656565;
 }
 
-.home .content h3{    
+.home .content h3{       
     font-size: 5rem;    
     text-transform: uppercase;
     letter-spacing: .3rem; 
     margin-bottom: 1rem;   
 }
 
-.home .content h3 span{    
+.home .content h3 span{      
     color: var(--pink);
     text-transform: uppercase;    
 }
