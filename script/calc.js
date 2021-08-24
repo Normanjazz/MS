@@ -4,6 +4,7 @@ var id_number = 1;
 //---------Создаем элемент по нажатию на кнопку "+""--------------------
 // И добавляет его в product_item, не заменяя старые (как это делает innerHTML +=. 
 const add_product_btn = document.querySelector('.add_product');
+
 add_product_btn.addEventListener('click', generate_product_item);
 
 function generate_product_item(){    
@@ -33,7 +34,7 @@ function generate_product_item(){
         })
     // --------------------------------------------------------
 
-    id_number +=1;  
+    id_number +=1;
 }
 // --------------------------------------------------------------------  
 // ----------Удаляем элемент по нажатию на кнопку "-""-----------------
@@ -48,9 +49,6 @@ function remove_product_item(){
 
 // Вводим переменную для подсчета итоговойстоимости
 let total_price = 0;
-
-// const calc_btn = document.querySelector('.calc_btn');
-// calc_btn.addEventListener('click', calcAll);
 
 //--------- Функция, вызывается при изменении значений в select и input-------
 function calcAll(){
@@ -82,8 +80,8 @@ function calcAll(){
         // Складываем значения стоимости у всех добавленных продуктов
         total_price += item_price;   
         // Вставляем итоговую стоимость в необходимое "поле" 
-        document.querySelector('.total_price').textContent = total_price; 
-         
+        document.querySelector('.total_price').textContent = total_price;
+        
     }
 // ---------------------------------------------------------------------------
 // Сбрасываем итоговую стоимость, чтобы не задваивать ее при следующем пересчете

@@ -73,8 +73,7 @@ section{
     width: 40px;
     height: 30px;
     border: 1px black solid;
-    background-color: rgb(223, 223, 223);
-    
+    background-color: rgb(223, 223, 223);    
 }
 
 .product-items .qty{
@@ -109,15 +108,3 @@ section{
     border-radius: 5rem;    
     font-size: 1rem;
 }  
-
-.calc_btn{
-    display: inline-block;    
-    text-transform: uppercase; 
-    padding: 0.5rem 2rem;
-    border: 1px rosybrown solid;
-    border-radius: 1rem;    
-    font-size: 0.7rem;
-    background-color: rgb(255, 219, 219);
-    letter-spacing: 0.2rem;
-
-}
