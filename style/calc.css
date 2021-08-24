@@ -44,7 +44,7 @@ section{
     margin-top: 1rem;
 }
 
-.product-item{
+.product-items{
     display: flex;
     flex-direction: column;
 }
@@ -58,14 +58,14 @@ section{
     align-items: center;
 }
 
-.product-item select{    
+.product-items select{    
     padding: 2px;
     width: 150px;
     height: 25px;
     border: 1px black solid;    
 }
 
-.product-item .lbl_units{
+.product-items .lbl_units{
     margin-left: 10px;
     padding: 2px;
     width: 40px;
@@ -75,7 +75,7 @@ section{
     
 }
 
-.product-item .qty{
+.product-items .qty{
     margin-left: 10px;
     padding: 2px;
     width: 50px;
@@ -83,7 +83,7 @@ section{
     border: 1px black solid;     
 }
 
-.product-item .lbl_total_cost{
+.product-items .lbl_total_cost{
     margin-left: 10px;
     padding: 2px;
     width: 60px;
@@ -92,13 +92,30 @@ section{
     background-color: rgb(223, 223, 223);    
 }
 
-.add_product{
+.buttons_line{
+    display: flex;
+    justify-content: center;  
+     
+}
+
+.btn{
     display: inline-block;    
-    text-transform: uppercase;   
-    margin-top: 1rem;
+    text-transform: uppercase;
+    margin: 1rem 1rem;    
     padding: 0.5rem 0.8rem;
     border: 1px rosybrown solid;
     border-radius: 5rem;    
-    font-size: 1rem;    
-    
+    font-size: 1rem;
 }  
+
+.calc_btn{
+    display: inline-block;    
+    text-transform: uppercase; 
+    padding: 0.5rem 2rem;
+    border: 1px rosybrown solid;
+    border-radius: 1rem;    
+    font-size: 0.7rem;
+    background-color: rgb(255, 219, 219);
+    letter-spacing: 0.2rem;
+
+}

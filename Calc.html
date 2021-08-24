@@ -12,19 +12,23 @@
         <!-- Start header section -->
         <header>        
             <h1>Калькулятор себестоимости кондитерских изделий</h1> 
-            <h2>ИТОГОВАЯ СЕБЕСТОИМОСТЬ ИЗДЕЛИЯ: <br><span class="total_price">1000р</span></h2>   
+            <h2>ИТОГОВАЯ СЕБЕСТОИМОСТЬ ИЗДЕЛИЯ: <br><span class="total_price">0</span>р</h2>   
         </header>
         <!-- End header section -->
         
         <!-- Start products section -->
         <section class="products">
             <h1 class="heading">Продукты</h1>            
-            <div class="product-item">
-                
+            <div class="product-items">
+
             </div>                
         </section>
         <!-- End products section -->
-        <a class="add_product" id="add_product">+</a>
+        <div class="buttons_line">        
+            <a class="add_product btn" id="add_product">+</a>
+            <a class="remove_product btn" id="remove_product">-</a>
+        </div>
+        <a class="calc_btn" id="calc_btn">Расчитать!</a>
     </div>
     <script src="./script/calc.js"></script>    
 </body>
