@@ -83,7 +83,7 @@ function generate_product_item(){
     const product_item = document.querySelector('.product-items');
     var newproduct_item = `
     <div class="product-content" id="proditem${id_number}">    
-        <select class="options" id="product${id_number}">
+        <select onchange="calcAll();" class="options" id="product${id_number}">
                    
         </select> 
         <label class="lbl_units" id="unit${id_number}"></label> 
@@ -144,14 +144,11 @@ function calcAll(){
         const item_price = unitprice * document.getElementById('qty' + i).value;
         document.getElementById('cost' + i).textContent = item_price;
 
-        total_price += item_price;
-        
+        total_price += item_price;        
+        document.querySelector('.total_price').textContent = total_price; 
+         
     }
 
- document.querySelector('.total_price').textContent = total_price;
-
-
-    // console.log(document.getElementById('product' + (id_number-1)).value)
+total_price = 0
 }
 
-// console.log(productData[1].id)
