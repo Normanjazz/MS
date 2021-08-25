@@ -1,4 +1,14 @@
+/* Подключаем свой шрифт */
+@font-face {
+	font-family: 'Muller';
+	src: url('../fonts/Muller-Regular.otf');
+}
 
+:root{
+    --gray:rgb(99, 99, 99);
+    --pink:rgb(245, 181, 170);
+    --gradient:linear-gradient(90deg, var(--purple), var(--pink));    
+}
 
 *{    
     margin: 0; 
@@ -9,40 +19,67 @@
 }
 
 body{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(254, 255, 236);    
+    font-family: Muller; 
+    background: url(../img/CALC_BG.png) no-repeat;
 }
-
-.container{
+.titleFrame{
+    position: absolute;
+    display: block;     
+    height: 12vh;
+    width: 100%;
+    background-color: var(--pink); 
+    box-shadow: 0.2rem .2rem rgba(0,0,0,.1);   
+    z-index: -10;
+}
+.container{    
     text-align: center;
     width: 360px;
     padding: 5%;
 }
 
-header h1{
+header h1{    
     font-size: 1rem;
+    color: var(--gray);
     text-transform: uppercase;
-    line-height: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.tot_cost{
+    width: 340px;
+    margin-top: 1.5rem;
+    display: block;
+    border: 1px solid var(--gray);
+    border-radius: 0.5rem;    
 }
 
 header h2{
+    color: var(--gray);
     margin-top: 1.5rem;
     font-size: 0.9rem;
 }
-header h2 span{
+header h2 span{    
     font-size: 1.2rem;
+    line-height: 3rem;
     font-weight: bold;
     color: tomato;
 }
 
-section{    
-    /* background: rgb(167, 24, 24);    */
+section{
     height: auto;    
 }
 
+.heading{
+    padding-bottom: 0.5rem;
+    color: var(--gray);
+}
+
 .products {
-    margin-top: 1rem;
+    width: 340px;
+    margin-top: .5rem;
+    display: block;
+    border: 1px solid var(--gray);
+    border-radius: 0.5rem;
+    padding: 1rem 0;    
 }
 
 .product-items{
@@ -53,18 +90,24 @@ section{
 .product-content{    
     display: flex;
     flex-direction: row;
-    background-color: rgb(255, 219, 219);
-    border: 1px black solid;
+    background-color: var(--pink);
+    border: 1px var(--gray) solid;
+    border-radius: 0.3rem;
     padding: 3px 5px; 
     margin: 0.2rem;
-    align-items: center;
+    align-items: center;    
+}
+
+.options{
+    color: var(--gray);
 }
 
 .product-items select{    
     padding: 2px;
     width: 150px;
     height: 25px;
-    border: 1px black solid;    
+    border: 1px var(--gray) solid; 
+    border-radius: 0.3rem;   
 }
 
 .product-items .lbl_units{
@@ -72,7 +115,9 @@ section{
     padding: 2px;
     width: 40px;
     height: 30px;
-    border: 1px black solid;
+    color: var(--gray);
+    border: 1px var(--gray) solid;
+    border-radius: 0.3rem;
     background-color: rgb(223, 223, 223);    
 }
 
@@ -81,7 +126,9 @@ section{
     padding: 2px;
     width: 50px;
     height: 30px;
-    border: 1px black solid;     
+    color: var(--gray);
+    border: 1px var(--gray) solid; 
+    border-radius: 0.3rem;    
 }
 
 .product-items .lbl_total_cost{
@@ -89,7 +136,9 @@ section{
     padding: 2px;
     width: 60px;
     height: 30px;
-    border: 1px black solid;
+    color: var(--gray);
+    border: 1px var(--gray) solid;
+    border-radius: 0.3rem;
     background-color: rgb(223, 223, 223);    
 }
 
