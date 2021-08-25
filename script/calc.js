@@ -47,7 +47,7 @@ function remove_product_item(){
 }
 // --------------------------------------------------------------------  
 
-// Вводим переменную для подсчета итоговойстоимости
+// Вводим переменную для подсчета итоговой стоимости
 let total_price = 0;
 
 //--------- Функция, вызывается при изменении значений в select и input-------
@@ -75,12 +75,12 @@ function calcAll(){
         // Умножаем полученную цену за единицу на кол-во товара, введенное пользователем
         const item_price = unitprice * document.getElementById('qty' + i).value;
         //Вставляем полученную цену в лейбл
-        document.getElementById('cost' + i).textContent = item_price;
+        document.getElementById('cost' + i).textContent = item_price.toFixed(2);
 
         // Складываем значения стоимости у всех добавленных продуктов
         total_price += item_price;   
         // Вставляем итоговую стоимость в необходимое "поле" 
-        document.querySelector('.total_price').textContent = total_price;
+        document.querySelector('.total_price').textContent = total_price.toFixed(2);
         
     }
 // ---------------------------------------------------------------------------
