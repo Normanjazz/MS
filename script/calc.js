@@ -43,7 +43,8 @@ remove_product_btn.addEventListener('click', remove_product_item);
 
 function remove_product_item(){
     document.getElementById('proditem' + (id_number-1)).remove();
-    id_number -=1    
+    id_number -=1 
+    calcAll()   
 }
 // --------------------------------------------------------------------  
 
