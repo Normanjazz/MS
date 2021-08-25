@@ -96,8 +96,8 @@ const productData = [
     },
     {
         "id": "dec1",
-        "name": "Изобр. на В/Б",
-        "unit": "шт",
+        "name": "Изобр. на ваф. бумаге",
+        "unit": "лист",
         "qty": "1",
         "price": "100.00",
         "unitprice": "100.00"

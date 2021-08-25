@@ -39,8 +39,8 @@ function generate_product_item(){
 // --------------------------------------------------------------------  
 // ----------Удаляем элемент по нажатию на кнопку "-""-----------------
 const remove_product_btn = document.querySelector('.remove_product');
-remove_product_btn.addEventListener('click', remove_product_item);
-
+    remove_product_btn.addEventListener('click', remove_product_item)
+    
 function remove_product_item(){
     document.getElementById('proditem' + (id_number-1)).remove();
     id_number -=1 
@@ -88,4 +88,8 @@ function calcAll(){
 // Сбрасываем итоговую стоимость, чтобы не задваивать ее при следующем пересчете
 total_price = 0
 }
+
+
+
+
 
