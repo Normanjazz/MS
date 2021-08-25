@@ -123,6 +123,8 @@ section{
 }
 
 .product-items .qty{
+    font-family: Muller;
+    text-align:end;
     margin-left: 10px;
     padding: 2px;
     width: 50px;
@@ -133,6 +135,7 @@ section{
 }
 
 .product-items .lbl_total_cost{
+    text-align:end;
     margin-left: 10px;
     padding: 2px;
     width: 60px;
@@ -143,18 +146,31 @@ section{
     background-color: rgb(223, 223, 223);    
 }
 
-.buttons_line{
+.buttons_line{    
     display: flex;
-    justify-content: center;  
+    justify-content: center;
+      
      
 }
 
 .btn{
-    display: inline-block;    
+    
+    display: block;    
     text-transform: uppercase;
     margin: 1rem 1rem;    
     padding: 0.5rem 0.8rem;
-    border: 1px rosybrown solid;
+    color: var(--gray);
+    border: 1px var(--pink) solid;
     border-radius: 5rem;    
     font-size: 1rem;
+
+    
 }  
+
+.btn :hover{
+    display: block;
+    border: 1px var(--gray) solid; 
+    cursor: pointer;
+    background-color: var(--pink);
+    border: 1px rosybrown solid;   
+}
